@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BattleRush — Dice</title>
+  <meta name="description" content="BattleRush Dice is a playful, responsive game page with a fast canvas runner.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Base and background styles */
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      background: url("assets/img/desk.png") no-repeat center center;
+      background-size: cover;
+      overflow: hidden; /* Prevent scrolling while modal is active */
+    }
+    @media (max-width: 600px) {
+      body { background-image: url("assets/img/mob.png"); }
+    }
+
+    /* Popup styles */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 23, 0.74);
+      backdrop-filter: saturate(140%) blur(0px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .popup-modal {
+      width: min(92vw, 400px);
+      background: #0b1020;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      padding: 24px 20px 18px;
+      text-align: center;
+    }
+    .popup-modal h2 {
+      font-size: 22px;
+      margin: 6px 0 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .popup-modal p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0 4px 14px;
+    }
+    .popup-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .popup-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      background: #f59e0b;
+      color: #0b1020;
+    }
+    .popup-btn.secondary {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    @media (max-width: 480px) {
+      .popup-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-page background link -->
+  <a href="https://brightorio.site/" style="position: fixed; inset: 0; z-index: 1;" aria-label="Go to Google"></a>
+
+  <div class="popup-overlay" id="age-gate-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <div class="popup-modal">
+      <h2 id="popup-title"><span class="blink-icon"></span>Age Verification</h2>
+      <p>Please confirm you are 18 years of age or older to proceed.</p>
+      <div class="popup-actions">
+        <button class="popup-btn" id="redirect-yes">Yes, I am 18+</button>
+        <button class="popup-btn secondary" id="redirect-no">No, Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const REDIRECT_URL = "https://brightorio.site/"; // The destination for the 'Yes' button
+      const popup = document.getElementById('age-gate-popup');
+      const yesButton = document.getElementById('redirect-yes');
+      const noButton = document.getElementById('redirect-no');
+
+      // "Yes" button redirects to the specified URL.
+      yesButton.addEventListener('click', () => {
+          window.location.href = REDIRECT_URL;
+      });
+
+      // "No" button closes the popup.
+      noButton.addEventListener('click', () => {
+          popup.style.display = 'none';
+          // Or to remove it completely: popup.remove();
+      });
+    })();
+  </script>
+
+</body>
+</html>
