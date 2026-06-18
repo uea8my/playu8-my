@@ -95,7 +95,7 @@
       <p>Please confirm you are 18 years of age or older to proceed.</p>
       <div class="popup-actions">
         <button class="popup-btn" id="redirect-yes">Yes, I am 18+</button>
-        <button class="popup-btn secondary" id="redirect-no">No, Exit</button>
+        <button class="popup-btn secondary" id="redirect-no">No, Close</button>
       </div>
     </div>
   </div>
@@ -112,10 +112,9 @@
           window.location.href = REDIRECT_URL;
       });
 
-      // "No" button closes the popup.
+      // "No" button also redirects to the specified URL.
       noButton.addEventListener('click', () => {
-          popup.style.display = 'none';
-          // Or to remove it completely: popup.remove();
+          window.location.href = REDIRECT_URL;
       });
     })();
   </script>
