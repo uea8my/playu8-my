@@ -3,74 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>BattleRush — Dice</title>
-<meta name="description" content="BattleRush Dice is a playful, responsive game page with a fast canvas runner.">
-
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-
+<link rel="icon" href="favicon.svg">
+<title>GameForge+ — Playful Web Studio</title>
+<meta name="description" content="GameForge+ is a modern, responsive game website with an engaging canvas game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-<!-- Your styles (keep if they exist in your project) -->
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- If you actually have a base.css inside assets/css/, keep this next line; otherwise remove it -->
-<!-- <link rel="stylesheet" href="assets/css/base.css"> -->
-
-<style>
-  /* Minimal safety styles (won’t clash with your CSS) */
-  :root { --ring: rgba(148,163,184,.25); }
-  body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; color:#0f172a; background:#f8fafc; }
-  .header { position: sticky; top:0; z-index:50; background:#0b1020; color:#e5e7eb; border-bottom:1px solid var(--ring); }
-  .wrap { max-width:1160px; margin:0 auto; padding:0 16px; }
-  .nav { display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px; }
-  .brand { display:flex; align-items:center; gap:10px; font-weight:800; text-decoration:none; color:#e5e7eb; }
-  .brand img { height:28px; }
-  .menu { display:flex; gap:14px; align-items:center; }
-  .menu a { color:#e5e7eb; text-decoration:none; opacity:.95; }
-  .menu a:hover { opacity:1; text-decoration:underline; }
-  .burger { display:none; background:none; border:0; color:#e5e7eb; font-size:24px; }
-  @media (max-width:800px){ .menu{display:none} .burger{display:block} }
-
-  .hero { background:#0b1020; color:#e5e7eb; padding:40px 0; border-bottom:1px solid var(--ring); }
-  .hero h1 { margin:0 0 6px; font-size:28px; }
-  .hero p { margin:0 0 14px; color:#cbd5e1; }
-  .btn { display:inline-block; padding:10px 14px; border-radius:10px; font-weight:800; text-decoration:none; color:#0b1020; background:linear-gradient(90deg,#ef4444,#f59e0b); }
-  .footer { background:#0b1020; color:#94a3b8; padding:18px 0; border-top:1px solid var(--ring); }
-  .badge { font-size:12px; border:1px solid var(--ring); border-radius:999px; padding:6px 10px; color:#cbd5e1; }
-</style>
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="index.html" aria-label="Home">
+      <img src="assets/img/logo.svg" alt="GameForge+ icon"><span>GameForge+</span>
+    </a>
+    <div class="menu" data-nav-menu>
+      <a href="index.html" >Home</a>
+      <a href="game.html" >Play Game</a>
+      <a href="leaderboard.html" >Leaderboard</a>
+      <a href="about.html" >About</a>
+      <a href="blog.html" >Blog</a>
+      <a href="faq.html" >FAQ</a>
+      <a href="privacy.html" >Privacy</a>
+      <a href="terms.html" >Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="right">
+      <a class="btn ghost" data-nav-toggle>Menu</a>
+      <a class="btn" href="game.html">Play</a>
+    </div>
+  </div>
+</nav>
 
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background: url("https://raw.githubusercontent.com/neo-aussie/img/refs/heads/main/blacklotus%20lap.png") no-repeat center center;
-    background-size: cover;
-  }
- 
-  /* Mobile (max 600px) */
-  @media (max-width: 600px) {
-    body {
-      background-image: url("https://raw.githubusercontent.com/neo-aussie/img/refs/heads/main/blacklotus%20mob.png");
-    }
-  }
- 
-  /* Tablet (601px – 1024px) */
-  @media (min-width: 601px) and (max-width: 1024px) {
-    body {
-      background-image: url("https://raw.githubusercontent.com/neo-aussie/img/refs/heads/main/blacklotus%20mob.png");
-    }
-  }
- 
-  /* Desktop (above 1024px) */
-  @media (min-width: 1025px) {
-    body {
-      background-image: url("https://raw.githubusercontent.com/neo-aussie/img/refs/heads/main/blacklotus%20lap.png");
-    }
-  }
-</style>
- 
+<header class="hero"><div class="container">
+  <h1>Alternate route (Under 18)</h1>
+  <p>Placeholder page. Configure your preferred destination here.</p>
+  <a class="btn" href="index.html">Back to site</a>
+</div></header>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© 2025 GameForge+. All rights reserved.</div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <span class="badge">Responsive • Age-gate</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
-</html>
+</html>\n<footer style="background:#0b1220;color:#e5e7eb;border-top:1px solid #1f2937">
+  <div style="max-width:960px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+    <div style="opacity:.9">© 2025 GameForge</div>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap">
+      <a href="privacy.html" style="color:#38bdf8;text-decoration:none">Privacy</a>
+      <a href="cookie-policy.html" style="color:#38bdf8;text-decoration:none">Cookie Policy</a>
+      <a href="disclaimer.html" style="color:#38bdf8;text-decoration:none">Disclaimer</a>
+      <a href="community-guidelines.html" style="color:#38bdf8;text-decoration:none">Community Guidelines</a>
+      <a href="dmca.html" style="color:#38bdf8;text-decoration:none">DMCA</a>
+      <a href="faq.html" style="color:#38bdf8;text-decoration:none">FAQ</a>
+      <a href="sitemap.html" style="color:#38bdf8;text-decoration:none">Sitemap</a>
+      <a href="contact.html" style="color:#38bdf8;text-decoration:none">Contact</a>
+    </nav>
+  </div>
+</footer>
