@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="favicon.svg">
-<title>GameForge+ — Playful Web Studio</title>
-<meta name="description" content="GameForge+ is a modern, responsive game website with an engaging canvas game.">
+<title>EpicRush — Playful Web Studio</title>
+<meta name="description" content="EpicRush is a modern, responsive game website with an engaging canvas game.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
 <nav class="nav">
   <div class="container nav-inner">
     <a class="logo" href="index.html" aria-label="Home">
-      <img src="assets/img/logo.svg" alt="GameForge+ icon"><span>GameForge+</span>
+      <img src="assets/img/logo epicrush.png" alt="EpicRush icon"><span>EpicRush</span>
     </a>
     <div class="menu" data-nav-menu>
-      <a href="index.html" >Home</a>
-      <a href="game.html" style='opacity:1;font-weight:800'>Play Game</a>
-      <a href="leaderboard.html" >Leaderboard</a>
-      <a href="about.html" >About</a>
-      <a href="blog.html" >Blog</a>
-      <a href="faq.html" >FAQ</a>
-      <a href="privacy.html" >Privacy</a>
-      <a href="terms.html" >Terms</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="game.html" class="active">Play Game</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="right">
       <a class="btn ghost" data-nav-toggle>Menu</a>
@@ -37,52 +37,37 @@
 
 <header class="hero">
   <div class="container">
-    <h1>Neon Runner — Mini Game</h1>
-    <p>Use ◀ ▶ or A/D to move. P = Pause, R = Restart. On mobile, drag to move.</p>
+    <h1>Play a quick, colorful challenge</h1>
+    <p>Take control of the action and chase a fresh high score in a bright, fast-paced browser game. The rules are easy to learn, the pace stays lively, and every run feels like a new chance to improve.</p>
     <div class="kudos">
-      <span class="pill">Power-ups</span>
-      <span class="pill">Combo Multiplier</span>
-      <span class="pill">Local Leaderboard</span>
+      <span class="pill">Quick rounds</span>
+      <span class="pill">Simple controls</span>
+      <span class="pill">Local scores</span>
+      <span class="pill">Responsive play</span>
     </div>
   </div>
 </header>
 
 <section class="section container">
-  <div class="card" style="text-align:center">
-    <canvas id="game" width="900" height="520" style="width:100%;max-width:900px;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#0b0e14,#0f1420)"></canvas>
-    <div style="height:12px"></div>
+  <div class="card game-card">
+    <canvas id="quantum-canvas" width="900" height="520"></canvas>
+    <div class="spacer-12"></div>
     <div>
-      <button class="btn" id="btn-pause">Pause</button>
-      <button class="btn" id="btn-restart">Save score & Restart</button>
-      <a class="btn ghost" href="leaderboard.html">View Leaderboard</a>
-      <a class="btn ghost" href="index.html">Back Home</a>
+      <button class="btn" id="qd-pause">Pause (P)</button>
+      <button class="btn" id="qd-restart">Save score & Restart</button>
     </div>
   </div>
 </section>
-<script src="assets/js/game.js"></script>
 
 <footer class="footer">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div>© 2025 GameForge+. All rights reserved.</div>
-    <div style="display:flex;gap:12px;align-items:center">
-      <span class="badge">Responsive • Age-gate</span>
+  <div class="container footer-inner">
+    <div>© 2026 EpicRush. All rights reserved.</div>
+    <div class="footer-badges">
+      <span class="badge">Fast • Friendly • Replayable</span>
     </div>
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/game.js"></script>
 </body>
-</html>\n<footer style="background:#0b1220;color:#e5e7eb;border-top:1px solid #1f2937">
-  <div style="max-width:960px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
-    <div style="opacity:.9">© 2025 GameForge</div>
-    <nav style="display:flex;gap:16px;flex-wrap:wrap">
-      <a href="privacy.html" style="color:#38bdf8;text-decoration:none">Privacy</a>
-      <a href="cookie-policy.html" style="color:#38bdf8;text-decoration:none">Cookie Policy</a>
-      <a href="disclaimer.html" style="color:#38bdf8;text-decoration:none">Disclaimer</a>
-      <a href="community-guidelines.html" style="color:#38bdf8;text-decoration:none">Community Guidelines</a>
-      <a href="dmca.html" style="color:#38bdf8;text-decoration:none">DMCA</a>
-      <a href="faq.html" style="color:#38bdf8;text-decoration:none">FAQ</a>
-      <a href="sitemap.html" style="color:#38bdf8;text-decoration:none">Sitemap</a>
-      <a href="contact.html" style="color:#38bdf8;text-decoration:none">Contact</a>
-    </nav>
-  </div>
-</footer>
+</html>
